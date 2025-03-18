@@ -60,23 +60,32 @@
 - [AdalZanabria](https://github.com/AdalZanabria)
 - [Aryan Prince](https://github.com/aryanprince)
 
-Change Theme
-Oh My Posh comes with >70 themes included out-of-the-box. Check out the “Themes” page documentation for a gallery of preinstalled themes.
+<h1> oh my posh </h1>
+Oh My Posh
+Oh My Posh is a prompt theme engine that lets you beautify the prompt string. This engine requires your Terminal to use a Nerd Font so make sure that you followed along the previous steps.
 
-All themes are located in ~\AppData\Local\Programs\oh-my-posh\themes if you used winget to install Oh My Posh. If you used an alternative installation method, visit the documentation and select your installation method to see where the themes are located.
+Setup
+Install “App Installer” from Microsoft Store to get the winget Windows Package Manager CLI.
 
-Suppose you want to use the powerlevel10k_rainbow preinstalled theme:
+⚠ Requires Windows 10 1809 (build 17763) or later
+Check out Oh My Posh’s documentation for alternative installation options.
+Restart your Windows Terminal and run winget to check if the package manager is correctly installed.
 
-Open Windows Terminal and run notepad $PROFILE in Powershell just like we did previously.
+In your Windows Terminal, run
 
-In the opened file, change the path after --config so that it uses powerlevel10k_rainbow.omp.json:
+winget install JanDeDobbeleer.OhMyPosh
+Restart your Windows Terminal. Next, try running oh-my-posh in Powershell to see if it’s correctly installed.
 
-oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/powerlevel10k_rainbow.omp.json | Invoke-Expression
-Restart your Terminal:
-powerlevel10k_rainbow theme
+Default theme
 
-&nbsp;
+Run the following command to open your Powershell profile.
 
-<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
-<p align="center"><a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>
+notepad $PROFILE
+If notepad shows a prompt saying that “Microsoft.Powershell_profile.ps1” is not found and asks if you would like to create the file, press “Yes” to create the file.
+
+Inside the file, paste in the following code and save the file. This will load Oh My Posh on start-up with the default theme.
+
+oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/jandedobbeleer.omp.json | Invoke-Expression
+Restart your Terminal. Your Powershell should now load Oh My Posh automatically
+
+Default theme on startup
