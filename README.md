@@ -60,6 +60,21 @@
 - [AdalZanabria](https://github.com/AdalZanabria)
 - [Aryan Prince](https://github.com/aryanprince)
 
+Change Theme
+Oh My Posh comes with >70 themes included out-of-the-box. Check out the “Themes” page documentation for a gallery of preinstalled themes.
+
+All themes are located in ~\AppData\Local\Programs\oh-my-posh\themes if you used winget to install Oh My Posh. If you used an alternative installation method, visit the documentation and select your installation method to see where the themes are located.
+
+Suppose you want to use the powerlevel10k_rainbow preinstalled theme:
+
+Open Windows Terminal and run notepad $PROFILE in Powershell just like we did previously.
+
+In the opened file, change the path after --config so that it uses powerlevel10k_rainbow.omp.json:
+
+oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/powerlevel10k_rainbow.omp.json | Invoke-Expression
+Restart your Terminal:
+powerlevel10k_rainbow theme
+
 &nbsp;
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
